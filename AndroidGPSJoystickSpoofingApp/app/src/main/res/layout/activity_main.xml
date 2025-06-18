@@ -5,6 +5,7 @@
     android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/black"
     tools:context=".MainActivity">
 
     <com.google.android.gms.maps.MapView
@@ -18,16 +19,66 @@
         android:layout_height="150dp"
         android:layout_gravity="bottom|start"
         android:layout_margin="16dp"
-        android:background="@drawable/joystick_background" />
+        android:alpha="0.7" />
 
-    <Button
-        android:id="@+id/btnLockLocation"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lock Location"
         android:layout_gravity="top|end"
         android:layout_margin="16dp"
-        android:backgroundTint="@color/purple_500"
-        android:textColor="@android:color/white" />
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnLockLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lock Location"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#444444"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnCircleRoute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Circle Route"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#444444"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnSquareRoute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Square Route"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#444444"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnSetGeofence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Geofence"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#444444"
+            android:textColor="@android:color/white" />
+
+        <SeekBar
+            android:id="@+id/speedSeekBar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:progress="50"
+            android:progressTint="#FFFFFF"
+            android:thumbTint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/speedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Speed: 5.0 m/s"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
 
 </FrameLayout>
